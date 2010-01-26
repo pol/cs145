@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html;charset=UTF-8' http-equiv='Content-type' />
+    <title>
+      The swedish flag: except tables.
+    </title>
+    <style type='text/css'>
+      table, td, tr {
+        padding: 0px;
+        margin: 0px; }
+      
+      table#flag1 {
+        width: 900px;
+        height: 563px;
+        background-color: #0000c6; }
+        table#flag1 .top {
+          height: 282px;
+          border-bottom: 57px solid yellow; }
+        table#flag1 .left {
+          width: 281px;
+          border-right: 57px solid yellow; }
+        table#flag1 .bottom {
+          border-top: 56px solid yellow; }
+        table#flag1 .right {
+          border-left: 56px solid yellow; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Original sweden.gif image
+      </p>
+      <img alt='Swedish Flag' src='images/sweden.gif' />
+    </div>
+    <hr />
+    <p>
+      Simple CSS with yellow borders (works with everything)
+    </p>
+    <table cellspacing='0' id='flag1'>
+      <tr>
+        <td class='left top'>
+          row 1 td 1
+        </td>
+        <td class='right top'>
+          row 1 td 2
+        </td>
+      </tr>
+      <tr>
+        <td class='left bottom'>
+          row 2 td 1
+        </td>
+        <td class='right bottom'>
+          row 2 td 2
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <p>
+      Old School Table (fails XHTML 1.1, works with 1.0 transitional)
+    </p>
+    <table bgcolor='#0000C6' cellspacing='0' id='flag2' width='900px'>
+      <tr>
+        <td width='280'>
+          row 1 td 1
+        </td>
+        <td bgcolor='#FFFF00' width='114'>
+          row 1 td 2
+        </td>
+        <td height='224'>
+          row 1 td 3
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor='#FFFF00' colspan='3' height='114'>
+          row 2 td 1 (colspan 3)
+        </td>
+      </tr>
+      <tr>
+        <td width='280'>
+          row 3 td 1
+        </td>
+        <td bgcolor='#FFFF00' width='114'>
+          row 3 td 2
+        </td>
+        <td height='224'>
+          row 3 td 3
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <p>
+      Silly Table Floating with in-line style (passes XHTML 1.1 and 1.0)
+    </p>
+    <table style='background-color: #0000C6; float:left; width:280px; height: 224px;'>
+      <tr>
+        <td>
+          table 1
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #FFFF00; float:left; width:114px; height: 224px;'>
+      <tr>
+        <td>
+          table 2
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #0000C6; width:505px; height: 224px;'>
+      <tr>
+        <td>
+          table 3
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #FFFF00; width:900px; height: 114px;'>
+      <tr>
+        <td>
+          table 4
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #0000C6; float:left; width:280px; height: 224px;'>
+      <tr>
+        <td>
+          table 5
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #FFFF00; float:left; width:114px; height: 224px;'>
+      <tr>
+        <td>
+          table 6
+        </td>
+      </tr>
+    </table>
+    <table style='background-color: #0000C6; width:505px; height: 224px;'>
+      <tr>
+        <td>
+          table 7
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <p>
+      Same silliness, but with floated divs (passes XHTML 1.1 and 1.0)
+    </p>
+    <div style='background-color: #0000C6; float:left; width:280px; height: 224px;'>
+      div 1
+    </div>
+    <div style='background-color: #FFFF00; float:left; width:114px; height: 224px;'>
+      div 2
+    </div>
+    <div style='background-color: #0000C6; float:left; width:505px; height: 224px;'>
+      div 3
+    </div>
+    <br clear='all' />
+    <div style='background-color: #FFFF00; width:900px; height: 114px;'>
+      div 4
+    </div>
+    <div style='background-color: #0000C6; float:left; width:280px; height: 224px;'>
+      div 5
+    </div>
+    <div style='background-color: #FFFF00; float:left; width:114px; height: 224px;'>
+      div 6
+    </div>
+    <div style='background-color: #0000C6; float:left; width:505px; height: 224px;'>
+      div 7
+    </div>
+    <br clear='all' />
+    <hr />
+    <p>
+      Ultimate Silliness (absolute positioned divs) (passes XHTML 1.1 and 1.0)
+    </p>
+    <div style='background-color: #0000C6; width:900px; height: 563px;'>
+      div 1
+    </div>
+    <div style='background-color: #FFFF00; width:900px; height: 114px; position: relative; top: -336px'>
+      div 2
+    </div>
+    <div style='background-color: #FFFF00; float:left; width:114px; height: 563px; position: relative; top:-677px; left: 280px;'>
+      div 3
+    </div>
+  </body>
+</html>

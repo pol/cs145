@@ -1,0 +1,128 @@
+!!!
+%html{ "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "Content-type" }
+    %title
+      The swedish flag: except tables.
+    %style{ :type => "text/css" }
+      :sass
+        !blue   = #0000C6
+        !brborder = 56px solid #FFFF00
+        !tlborder = 57px solid #FFFF00
+        table,td,tr
+          padding: 0px
+          margin:  0px
+        table#flag1
+          width: 900px
+          height: 563px
+          background-color = !blue
+          .top
+            height: 282px
+            border-bottom = !tlborder
+          .left
+            width: 281px
+            border-right  = !tlborder
+          .bottom 
+            border-top    = !brborder
+          .right 
+            border-left   = !brborder
+  %body
+    %div
+      %p
+        Original sweden.gif image
+      %img{ :src => "images/sweden.gif", :alt => "Swedish Flag" }
+    %hr
+    %p
+      Simple CSS with yellow borders (works with everything)
+    %table#flag1{ :cellspacing => "0" }
+      %tr
+        %td.left.top
+          row 1 td 1
+        %td.right.top
+          row 1 td 2
+      %tr
+        %td.left.bottom
+          row 2 td 1
+        %td.right.bottom
+          row 2 td 2
+    %hr
+    %p
+      Old School Table (fails XHTML 1.1, works with 1.0 transitional)
+    %table#flag2{ :cellspacing => "0", :width => "900px", :bgcolor => "#0000C6" }
+      %tr
+        %td{ :width  => "280" }
+          row 1 td 1
+        %td{ :width  => "114", :bgcolor => "#FFFF00" }
+          row 1 td 2
+        %td{ :height => "224" }
+          row 1 td 3
+      %tr
+        %td{ :height => "114", :bgcolor => "#FFFF00", :colspan => "3" }
+          row 2 td 1 (colspan 3)
+      %tr
+        %td{ :width  => "280" }
+          row 3 td 1
+        %td{ :width  => "114", :bgcolor => "#FFFF00" }
+          row 3 td 2
+        %td{ :height => "224" }
+          row 3 td 3
+    %hr
+    %p
+      Silly Table Floating with in-line style (passes XHTML 1.1 and 1.0)
+    %table{ :style => "background-color: #0000C6; float:left; width:280px; height: 224px;" }
+      %tr
+        %td
+          table 1
+    %table{ :style => "background-color: #FFFF00; float:left; width:114px; height: 224px;" }
+      %tr
+        %td
+          table 2
+    %table{ :style => "background-color: #0000C6; width:505px; height: 224px;" }
+      %tr
+        %td
+          table 3
+    %table{ :style => "background-color: #FFFF00; width:900px; height: 114px;" }
+      %tr
+        %td
+          table 4
+    %table{ :style => "background-color: #0000C6; float:left; width:280px; height: 224px;" }
+      %tr
+        %td
+          table 5
+    %table{ :style => "background-color: #FFFF00; float:left; width:114px; height: 224px;" }
+      %tr
+        %td
+          table 6
+    %table{ :style => "background-color: #0000C6; width:505px; height: 224px;" }
+      %tr
+        %td
+          table 7
+    %hr
+    %p
+      Same silliness, but with floated divs (passes XHTML 1.1 and 1.0)
+    %div{ :style => "background-color: #0000C6; float:left; width:280px; height: 224px;" }
+      div 1
+    %div{ :style => "background-color: #FFFF00; float:left; width:114px; height: 224px;" }
+      div 2
+    %div{ :style => "background-color: #0000C6; float:left; width:505px; height: 224px;" }
+      div 3
+    %br{  :clear => 'all'}
+    %div{ :style => "background-color: #FFFF00; width:900px; height: 114px;" }
+      div 4
+    %div{ :style => "background-color: #0000C6; float:left; width:280px; height: 224px;" }
+      div 5
+    %div{ :style => "background-color: #FFFF00; float:left; width:114px; height: 224px;" }
+      div 6
+    %div{ :style => "background-color: #0000C6; float:left; width:505px; height: 224px;" }
+      div 7
+    %br{ :clear => 'all'}
+    %hr
+    %p
+      Ultimate Silliness (absolute positioned divs) (passes XHTML 1.1 and 1.0)
+    %div{ :style => "background-color: #0000C6; width:900px; height: 563px;" }
+      div 1
+    %div{ :style => "background-color: #FFFF00; width:900px; height: 114px; position: relative; top: -336px" }
+      div 2
+    %div{ :style => "background-color: #FFFF00; float:left; width:114px; height: 563px; position: relative; top:-677px; left: 280px;" }
+      div 3
+    
