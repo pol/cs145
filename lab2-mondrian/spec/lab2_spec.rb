@@ -85,22 +85,28 @@ describe "Lab2 Project" do
   end
 
   # 0 points. Below the drawing is a paragraph element with the content - Here is the original drawing
+  # make sure you are ignoring newlines
   it "should have a p containing 'Here is the original drawing'" do
-    (@doc/'p').first.inner_html.match(/Here.*is.*the.*original.*drawing/).should_not be_nil
+    (@doc/'p').first.inner_html.gsub(/\n/,'').match(/Here.*is.*the.*original.*drawing/).should_not be_nil
+  end
+  
+  # 1 point.  Should have a link in the paragraph to the original
+  it "should have a link from 'original drawing' to 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'" do
+    (@doc/'p'/'a').first.attributes['href'].should == 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'
+    (@doc/'p'/'a').first.inner_html.gsub(/\n/,'').should =~ /original.*drawing/
   end
   
   # 1 point
-  it "should have a link from 'original drawing' to 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'" do
-    (@doc/'a').first.attributes['href'].should == 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'
+  # this is a little silly, it's just running tidy on the code.
+  it "should be indented" do
+    @results = `tidy -i -m lab2/index.html 2>&1`
   end
-  
+
   # 2 points
   it "should validate correctly" do
-  end
-  
-  # 1 point
-  it "should be indented" do
-    
+    @validator = MarkupValidator.new
+    results = @validator.validate_file('lab2/index.html')
+    results.errors.should be_empty
   end
   
 end
