@@ -93,7 +93,7 @@ describe "Lab2 Project" do
   # 1 point.  Should have a link in the paragraph to the original
   it "should have a link from 'original drawing' to 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'" do
     (@doc/'p'/'a').first.attributes['href'].should == 'http://www.anthroposophie.net/bilder/mondrian_comp_rgb.jpg'
-    (@doc/'p'/'a').first.inner_html.gsub(/\n/,'').should =~ original.*drawing/
+    (@doc/'p'/'a').first.inner_html.gsub(/\n/,'').should =~ /original.*drawing/
   end
   
   # 1 point
