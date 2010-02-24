@@ -1,0 +1,45 @@
+th{
+  color: black;
+  background-color: #999999;
+}
+
+h1{
+  border: 2px solid;
+  width: 440px;
+  background-color: #ffff99;
+  line-height: 100px;
+  padding-left: 10px;
+}
+
+.standingsleft{
+  width: 200px;
+  text-align: left;
+  padding-left: 10px;
+  height: 50px;
+}
+
+.standingsright{
+  width: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#box1{
+  border: 2px dotted;
+  padding: 10px;
+  margin-top: 20px;
+  width: 440px;
+  background-color: #ffff99;
+  text-align: left;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+a{
+  color: black;
+}
+
+.bar{
+  padding-left: 8px;
+  padding-right: 8px;
+}
