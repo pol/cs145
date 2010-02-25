@@ -1,4 +1,6 @@
---colour
---format progress
---loadby mtime
---reverse
+require 'rubygems'
+require 'spec'
+require 'hpricot'
+require 'w3c_validators'
+
+include W3CValidators
