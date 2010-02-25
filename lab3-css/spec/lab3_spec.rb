@@ -141,5 +141,9 @@ describe "Lab3 Project" do
 
   # 1 point. The expected directory structure is correct.
   # NOTE: this is inconsistent with the lab submission instructions
-  it "should have a proper directory structure"
+  it "should have a proper directory structure" do
+    File.exists?('lab3/index.html').should be_true
+    File.exists?('lab3/css/lab3.css').should be_true
+    File.exists?('lab3.zip').should be_true
+  end
 end
