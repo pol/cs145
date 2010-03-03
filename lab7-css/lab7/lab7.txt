@@ -1,0 +1,19 @@
+2. Put images in an image directory
+	 If this were production, I would rename the CSS file more appropriately. And put it in a 'css' or 'stylesheets' directory.
+	
+3. bullet2.gif
+
+4. "A demonstration of what can be accomplished visually through <acronym title="Cascading Style Sheets">CSS</acronym>-based design. Select any style sheet           	from the list to load it into this page."
+
+5. #container
+
+6. body, #666666
+
+7. #participation .p1 {text-indent:50px;}
+
+8. #participation .p1 acronym {border-bottom-color: red;}
+
+9. Q: How would you increase the margin between list item bullets and the list item text by 5px?
+	 A: li {padding: 0 0 5px 20px;}
+		
+	 
