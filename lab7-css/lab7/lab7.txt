@@ -13,7 +13,6 @@
 
 8. #participation .p1 acronym {border-bottom-color: red;}
 
-9. Q: How would you increase the margin between list item bullets and the list item text by 5px?
-	 A: li {padding: 0 0 5px 20px;}
-		
-	 
+9. Q: Name two different ways could increase the vertical spacing between list items by 5px?
+	 A.1: Update line 219 with: "padding: 0 0 10px 15px;"
+	 A.2: Update line 220 with: "margin: 0 0 5px 0;" 
