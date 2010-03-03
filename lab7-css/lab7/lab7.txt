@@ -1,9 +1,12 @@
 2. Put images in an image directory
-	 If this were production, I would rename the CSS file more appropriately. And put it in a 'css' or 'stylesheets' directory.
-	
+   If this were production, I would rename the CSS file more appropriately. 
+   And put it in a 'css' or 'stylesheets' directory.
+
 3. bullet2.gif
 
-4. "A demonstration of what can be accomplished visually through <acronym title="Cascading Style Sheets">CSS</acronym>-based design. Select any style sheet           	from the list to load it into this page."
+4. "A demonstration of what can be accomplished visually through <acronym title="Cascading Style
+   Sheets">CSS</acronym>-based design. Select any style sheet from the list to load it into this
+   page."
 
 5. #container
 
@@ -13,6 +16,6 @@
 
 8. #participation .p1 acronym {border-bottom-color: red;}
 
-9. Q: Name two different ways could increase the vertical spacing between list items by 5px?
-	 A.1: Update line 219 with: "padding: 0 0 10px 15px;"
-	 A.2: Update line 220 with: "margin: 0 0 5px 0;" 
+9. Q: What are two different ways you could increase the vertical spacing between list items by 5px?
+   A.1: Update line 219 with: "padding: 0 0 10px 15px;"
+   A.2: Update line 220 with: "margin: 0 0 5px 0;" 
