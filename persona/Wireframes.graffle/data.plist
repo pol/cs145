@@ -40,7 +40,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-03-09 01:34:27 -0700</string>
+	<string>2010-03-09 01:36:27 -0700</string>
 	<key>Modifier</key>
 	<string>Pol Llovet</string>
 	<key>NotesVisible</key>
@@ -5229,11 +5229,11 @@ Hero Content}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{401.333, 100.852}, {67.9938, 67.6403}}</string>
+					<string>{{220.831, 227.333}, {97.6663, 72.2552}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
-					<integer>26456</integer>
+					<integer>26677</integer>
 					<key>Layer</key>
 					<integer>0</integer>
 					<key>Shape</key>
@@ -5242,46 +5242,34 @@ Hero Content}</string>
 					<dict>
 						<key>UnitPoints</key>
 						<array>
-							<string>{-0.458338, -0.468584}</string>
-							<string>{-0.458338, -0.468584}</string>
-							<string>{0.161459, -0.5}</string>
-							<string>{0.161459, -0.5}</string>
-							<string>{0.161459, -0.5}</string>
-							<string>{0.479167, -0.463335}</string>
-							<string>{0.479167, -0.463335}</string>
-							<string>{0.479167, -0.463335}</string>
-							<string>{0.500003, 0.0287991}</string>
-							<string>{0.499999, 0.0287991}</string>
-							<string>{0.499999, 0.0287991}</string>
-							<string>{0.468751, 0.468586}</string>
-							<string>{0.468751, 0.468586}</string>
-							<string>{0.468751, 0.468586}</string>
-							<string>{0.0416698, 0.5}</string>
-							<string>{0.0416641, 0.5}</string>
-							<string>{0.0416689, 0.5}</string>
-							<string>{-0.468752, 0.479057}</string>
-							<string>{-0.468752, 0.479057}</string>
-							<string>{-0.468752, 0.479057}</string>
-							<string>{-0.5, 0.013092}</string>
-							<string>{-0.5, 0.013092}</string>
-							<string>{-0.5, 0.013092}</string>
-							<string>{-0.458338, -0.468584}</string>
+							<string>{-0.458794, -0.468585}</string>
+							<string>{-0.458794, -0.468585}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.500005, 0.0312888}</string>
+							<string>{0.5, 0.0312887}</string>
+							<string>{0.5, 0.0312882}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.0357559, 0.5}</string>
+							<string>{0.0357506, 0.5}</string>
+							<string>{0.0357559, 0.5}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.458794, -0.468585}</string>
 						</array>
 					</dict>
 					<key>Style</key>
 					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.728261</string>
-								<key>g</key>
-								<string>0.728261</string>
-								<key>r</key>
-								<string>0.728261</string>
-							</dict>
-						</dict>
 						<key>shadow</key>
 						<dict>
 							<key>Draws</key>
@@ -5296,7 +5284,8 @@ Hero Content}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
 
-\f0\fs24 \cf0 IMAGE}</string>
+\f0\fs24 \cf0 Image\
+}</string>
 					</dict>
 				</dict>
 				<dict>
@@ -6248,7 +6237,7 @@ clicked}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{235.316, 141.187}, {67.9938, 450.625}}</string>
+					<string>{{235.316, 141.188}, {67.9938, 450.625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -6441,7 +6430,7 @@ clicked}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{214, 116.667}, {230, 226.333}}</string>
+					<string>{{213, 105.333}, {242.994, 122}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -6496,8 +6485,141 @@ clicked}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
 
-\f0\fs24 \cf0 Text Heavy\
+\f0\fs24 \cf0 Image Heavy\
 Hero Content}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{324.333, 227.333}, {119.667, 111.333}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>26456</integer>
+					<key>Layer</key>
+					<integer>0</integer>
+					<key>Shape</key>
+					<string>Bezier</string>
+					<key>ShapeData</key>
+					<dict>
+						<key>UnitPoints</key>
+						<array>
+							<string>{-0.458338, -0.468828}</string>
+							<string>{-0.458338, -0.468828}</string>
+							<string>{0.161459, -0.5}</string>
+							<string>{0.161459, -0.5}</string>
+							<string>{0.161459, -0.5}</string>
+							<string>{0.479168, -0.463621}</string>
+							<string>{0.479168, -0.463621}</string>
+							<string>{0.479168, -0.463621}</string>
+							<string>{0.500002, 0.0246899}</string>
+							<string>{0.5, 0.0246899}</string>
+							<string>{0.5, 0.0246899}</string>
+							<string>{0.46875, 0.461056}</string>
+							<string>{0.46875, 0.461056}</string>
+							<string>{0.46875, 0.461056}</string>
+							<string>{0.0187793, 0.5}</string>
+							<string>{0.0187712, 0.5}</string>
+							<string>{0.0187783, 0.500003}</string>
+							<string>{-0.468753, 0.471445}</string>
+							<string>{-0.468753, 0.471445}</string>
+							<string>{-0.468753, 0.471445}</string>
+							<string>{-0.5, 0.00910354}</string>
+							<string>{-0.5, 0.00910354}</string>
+							<string>{-0.5, 0.00910354}</string>
+							<string>{-0.458338, -0.468828}</string>
+						</array>
+					</dict>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.728261</string>
+								<key>g</key>
+								<string>0.728261</string>
+								<key>r</key>
+								<string>0.728261</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+
+\f0\fs24 \cf0 Supporting Text}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{220.479, 304.667}, {97.6663, 72.2552}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>26679</integer>
+					<key>Layer</key>
+					<integer>0</integer>
+					<key>Shape</key>
+					<string>Bezier</string>
+					<key>ShapeData</key>
+					<dict>
+						<key>UnitPoints</key>
+						<array>
+							<string>{-0.458794, -0.468585}</string>
+							<string>{-0.458794, -0.468585}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.154237, -0.5}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.468476, -0.463336}</string>
+							<string>{0.500005, 0.0312888}</string>
+							<string>{0.5, 0.0312887}</string>
+							<string>{0.5, 0.0312882}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.458177, 0.468584}</string>
+							<string>{0.0357559, 0.5}</string>
+							<string>{0.0357506, 0.5}</string>
+							<string>{0.0357559, 0.5}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.469094, 0.479056}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.5, 0.0130921}</string>
+							<string>{-0.458794, -0.468585}</string>
+						</array>
+					</dict>
+					<key>Style</key>
+					<dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+
+\f0\fs24 \cf0 Image\
+}</string>
 					</dict>
 				</dict>
 				<dict>
@@ -7802,6 +7924,10 @@ Hero Content}</string>
 				<key>name</key>
 				<string>Canvas 2</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Canvas 3</string>
+			</dict>
 		</array>
 		<key>Frame</key>
 		<string>{{1559, 388}, {1066, 836}}</string>
@@ -7818,7 +7944,7 @@ Hero Content}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-17, 121.333}, {611.333, 454.667}}</string>
+		<string>{{-17, 52.6667}, {611.333, 454.667}}</string>
 		<key>Zoom</key>
 		<real>1.5</real>
 		<key>ZoomValues</key>
