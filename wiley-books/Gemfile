@@ -1,4 +1,5 @@
 # A sample Gemfile
 source :gemcutter
 #
-# gem "rails"
+gem "webby"
+gem "haml"
