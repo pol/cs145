@@ -1,0 +1,13 @@
+---
+extension: html
+filter: haml
+---
+!!! Strict
+%html
+
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %title Lab 10
+    %link{:rel => "stylesheet", :href => "css/lab10.css", :type =>"text/css"}/
+
+  %body= @content
