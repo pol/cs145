@@ -1,6 +1,9 @@
 body {
   text-align: center; }
 
+a {
+  text-decoration: none; }
+
 .text_link {
   color: #a0a0a0;
   font-family: Geneva, Ariel, Helvetica, san-serif;
