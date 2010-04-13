@@ -1,64 +1,23 @@
-
 body {
-  font-family: Verdana, "Bitstream Vera Sans", sans-serif;
-}
+  font-family: Garamond, serif;
+  background-color: #181818;
+  color: #ffffff; }
 
-/* Headings
- * --------------------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6 { color: #111; }
-
-/* Text Elements
- * --------------------------------------------------------------------- */
-a                 { color: #125AA7; }
-a:hover           { color: #000; }
-blockquote        { color: #666; }
-
-pre {
-  background: #eee;
-  border:     1px solid #ddd;
-}
-
-hr {
-  background: #B2CCFF;
-  color:      #B2CCFF;
-}
-
-/* Tables
- * --------------------------------------------------------------------- */
-table {
-  border-top:     1px solid #ddd;
-  border-left:    1px solid #ddd;
-}
-th,td {
-  border-bottom:  1px solid #ddd;
-  border-right:   1px solid #ddd;
-}
-
-/* Default Classes
- * --------------------------------------------------------------------- */
-p.quiet { color: #666; }
-.alt    { color: #666; }
-
-p.title {
-  color: #111;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-
-#header p.title { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
-
-.container{
+.container {
   width: 960px;
   border: 1px solid red;
-  height: 700px;
-}
+  height: 700px; }
 
-.game{
-  width: 200px; 
-  margin: 0px auto; 
-  background-color: blue; 
- locallocallasdfl height: 700px;
-}
+#horizontal-strip {
+  float: left;
+  height: 50%;
+  margin-bottom: -120px; }
+
+.game {
+  clear: both;
+  height: 240px;
+  width: 100%;
+  position: relative;
+  border: 1px solid white; }
 
 /* EOF */
