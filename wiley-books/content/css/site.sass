@@ -4,6 +4,7 @@ filter:    sass
 layout:    nil   # no layout
 ---
 
+// Color Variables
 !background = "#181818"
 !border     = "#ddd"
 !header     = "#666"
@@ -15,6 +16,7 @@ layout:    nil   # no layout
 !quiet      = "#666"
 !alt        = "#666"
 
+// Body
 body 
   font-family: Garamond, serif
   background-color = !background
@@ -67,4 +69,36 @@ p
     line-height: 1
     margin-bottom: 0.5em
 
-/* EOF */
+#horizontal-strip
+  margin-top: 290px
+
+#logo
+  position: absolute
+  top: 40px
+  left: 500px
+
+// Game Strip
+#game
+  height: 100px
+  background-color: #2C2C2C
+  padding: 10px
+  .rps
+    margin-left: 100px
+    width: 100px
+    height: 100px
+    float: left
+    &.rock
+      background-image: url(/images/rock.png)
+      &:hover
+        background-image: url(/images/rock-w.png)
+    &.paper
+      background-image: url(/images/paper-y.png)
+      &:hover
+        background-image: url(/images/paper-w.png)
+    &.scissors
+      background-image: url(/images/scissors.png)
+      &:hover
+        background-image: url(/images/scissors-w.png) 
+    &.result
+      background-image: url(/images/scissors-r.png)
+

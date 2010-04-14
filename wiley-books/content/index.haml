@@ -5,11 +5,6 @@ extension: html
 layout: front
 ---
 
-#horizontal-strip
-  .game
-    .rps.rock
-    .rps.paper
-    .rps.scissors
-    .rps.result
+#horizontal-strip= render(:partial => 'game')
     
 <img id='logo' src='images/wiley-logo-blue.png />
