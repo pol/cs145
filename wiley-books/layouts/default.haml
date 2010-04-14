@@ -20,6 +20,36 @@ filter:    haml
     %link{'rel'=>"stylesheet", 'href'=>"/css/site.css", 'type'=>"text/css", 'media'=>"screen, projection"}/
     
   %body
+    #navigation
+      #edge
+      #tabs
+        .home
+          h<br>
+          o<br>
+          m<br>
+          e
+        .about
+          a<br>
+          b<br>
+          o<br>
+          u<br>
+          t
+        .events
+          e<br>
+          v<br>
+          e<br>
+          n<br>
+          t<br>
+          s<br>
+        .books
+          b<br>
+          o<br>
+          o<br>
+          k<br>
+          s<br>
+    
+    #default-game= render(:partial => 'game')
+    %img(id='logo' src='images/wiley-logo-blue.png')
+    
     .container= @content
-
-    #bottom-strip= render(:partial => 'game')
+    

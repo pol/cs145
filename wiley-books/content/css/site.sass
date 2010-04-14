@@ -20,6 +20,7 @@ layout:    nil   # no layout
 body 
   font-family: Garamond, serif
   background-color = !background
+  min-width: 960px
 
 // Headings
 h1,h2,h3,h4,h5,h6 
@@ -69,13 +70,53 @@ p
     line-height: 1
     margin-bottom: 0.5em
 
-#horizontal-strip
+#front-game
   margin-top: 290px
+  
+#default-game
+  position: absolute
+  bottom: 0px
+  width: 100%
 
 #logo
   position: absolute
-  top: 40px
-  left: 500px
+  bottom: 10px
+  right: 10px
+
+// Navigation Strip
+#navigation
+  position: absolute
+  right: 0px
+  height: 100%
+  width: 120px
+  background-color: #000
+  #edge
+    background-color: #2C2C2C
+    width: 50%
+    height: 100%
+    float: left
+  #tabs
+    float: left
+    width: 50%
+    padding-top: 7px
+    div
+      margin-right: 20px
+      margin-top: 3px
+      text-align: center
+      border: 3px solid #2C2C2C
+      border-left: 5px solid #2C2C2C
+      font-size: 1.2em
+      font-weight: bold
+      text-transform: uppercase
+      &.home 
+        background-color: magenta
+      &.about 
+        background-color: green
+      &.events 
+        background-color: cyan
+      &.books
+        background-color: orange
+    
 
 // Game Strip
 #game
