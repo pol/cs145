@@ -20,6 +20,7 @@ filter:    haml
     %link{'rel'=>"stylesheet", 'href'=>"/css/site.css", 'type'=>"text/css", 'media'=>"screen, projection"}/
     
   %body
+    .container= @content
     #navigation
       #edge
       #tabs
@@ -50,6 +51,4 @@ filter:    haml
     
     #default-game= render(:partial => 'game')
     %img(id='logo' src='images/wiley-logo-blue.png')
-    
-    .container= @content
     
