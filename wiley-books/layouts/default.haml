@@ -4,52 +4,37 @@ filter:    haml
 ---
 !!! Strict
 
-%html{'xmlns' => "http://www.w3.org/1999/xhtml", 'xml:lang' => "en", 'lang' => "en-us"}
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us")
   %head
-    %meta{'http-equiv' => "content-type", 'content' => "text/html; charset=utf-8"}/
-    %meta{'name' => "author", 'content' => "text/html; charset=utf-8"}/
+    %meta(http-equiv="content-type" content="text/html; charset=utf-8")/
+    %meta(name="author" content="text/html; charset=utf-8")/
     %title= @page.title
     /Blueprint CSS Framework
-    %link{'rel'=>"stylesheet", 'href'=>"/css/blueprint/screen.css", 'type'=>"text/css", 'media'=>"screen, projection"}/
-    %link{'rel'=>"stylesheet", 'href'=>"/css/blueprint/print.css", 'type'=>"text/css", 'media'=>"print"}/
+    %link(rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection")/
+    %link(rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print")/
     /[if IE]
-      %link{'rel'=>"stylesheet", 'href'=>"/css/blueprint/ie.css", 'type'=>"text/css", 'media'=>"screen, projection"}/
+      %link(rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection")/
     /Site CSS
-    %link{'rel'=>"stylesheet", 'href'=>"/css/site.css", 'type'=>"text/css", 'media'=>"screen, projection"}/
-    
+    %link(rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection")/
+    /Game CSS
+    %link(rel="stylesheet" href="css/game.css" type="text/css" media="screen, projection")/
+    %script(type="text/javascript" src="js/jquery-1.4.2.min.js")
+    %script(type="text/javascript" src="js/rockpaperscissors.js")
   %body
     #navigation
       #edge
       #tabs
         .home
-          %a(href='/welcome.html')
-            h<br>
-            o<br>
-            m<br>
-            e
+          %a(href='welcome.html')=      vertical_text("home")
         .about
-          %a(href='/text_heavy.html')
-            a<br>
-            b<br>
-            o<br>
-            u<br>
-            t
+          %a(href='text_heavy.html')=   vertical_text("about")
         .events
-          %a(href='/welcome.html')
-            e<br>
-            v<br>
-            e<br>
-            n<br>
-            t<br>
-            s<br>
+          %a(href='welcome.html')=      vertical_text("events")
         .books
-          %a(href='/image_heavy.html')
-            b<br>
-            o<br>
-            o<br>
-            k<br>
-            s<br>
-    
+          %a(href='image_heavy.html')=  vertical_text("books")
+          
     #default-game= render(:partial => 'game')
+
     %img(id='logo' src='images/wiley-logo-blue.png')
+
     .container= @content
