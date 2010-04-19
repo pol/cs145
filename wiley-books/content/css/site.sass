@@ -5,30 +5,30 @@ layout:    nil   # no layout
 ---
 
 // Color Variables
-!background = "#181818"
-!border     = "#ddd"
-!header     = "#666"
-!link       = "#125AA7"
-!link_hover = "#000"
-!blockquote = "#666"
-!box_bg     = "#eee"
-!highlight  = "#B2CCFF"
-!quiet      = "#666"
-!alt        = "#666"
+!background = #181818
+!lightslate = #2C2C2C
+!border     = #DDD
+!header     = #666
+!link       = #125AA7
+!link_hover = #000
+!blockquote = #666
+!box_bg     = #EEE
+!highlight  = #B2CCFF
+!quiet      = #666
+!alt        = #666
+!homecolor  = #F0F
 
 // Body
 body 
   font-family: Garamond, serif
   background-color = !background
   min-width: 960px
-  color: white
+  color: #FFF
   padding-bottom: 120px
 
 .container
-  margin: 10px
-
-.container
-  margin: 10px 120px 120px 10px
+  margin: 0px 120px 120px 10px
+  padding-top: 10px
 
 // Headings
 h1,h2,h3,h4,h5,h6 
@@ -50,6 +50,14 @@ pre
 hr
   background = !highlight
   color =      !highlight
+
+// Alignment
+.center
+  text-align: center
+
+// Size
+.big-text
+  font-size: 6em
 
 // Tables
 table 
@@ -91,7 +99,7 @@ p
   position: absolute
   bottom: 10px
   right: 10px
-
+  
 // Navigation Strip
 #navigation
   position: absolute
@@ -100,7 +108,7 @@ p
   width: 120px
   background-color: #000
   #edge
-    background-color: #2C2C2C
+    background-color = !lightslate
     width: 50%
     height: 100%
     float: left
@@ -110,58 +118,39 @@ p
     padding-top: 7px
     div
       margin-right: 20px
-      margin-top: 3px
-      text-align: center
-      border: 3px solid #2C2C2C
-      border-left: 5px solid #2C2C2C
+      margin-top: 5px
+      padding: 2px 0px 2px 10px
+      border = "3px solid #{!lightslate}"
+      border-left = "5px solid #{!lightslate}"
       font-size: 1.2em
       font-weight: bold
       text-transform: uppercase
+      line-height: 1.1em
       &.home 
-        background-color: magenta
+        background-color = !homecolor
       &.about 
-        background-color: green
+        background-color: #0F0
       &.events 
-        background-color: cyan
+        background-color: #0FF
       &.books
-        background-color: orange
+        background-color: #FF0
+      &:hover
+        padding-left: 15px
+        margin-right: 15px
     a
       text-decoration: none
       color: black
       display: block
-      &:hover
-        color: red
 
-// Game Strip
-#game
-  height: 100px
-  background-color: #2C2C2C
-  padding: 10px
-  .rps
-    margin-left: 100px
-    width: 100px
-    height: 100px
-    float: left
-    &.rock
-      background-image: url(/images/rock.png)
-      &:hover
-        background-image: url(/images/rock-w.png)
-    &.paper
-      background-image: url(/images/paper-y.png)
-      &:hover
-        background-image: url(/images/paper-w.png)
-    &.scissors
-      background-image: url(/images/scissors.png)
-      &:hover
-        background-image: url(/images/scissors-w.png) 
-    &.result
-      background-image: url(/images/scissors-r.png)
-      a#welcome_link
-        display: block
-        height: 99px
-        width: 99px
-        margin: auto
-        text-decoration: none
+// Big Quote
+.bottom
+  margin-top: 100px
+
+.big-quote
+  font-size: 18em
+  line-height: 1em
+  color = !header
+  margin-top: -60px
 
 // Image of Sam and Sara
 #sam_and_sara
