@@ -51,7 +51,7 @@ function play(choice){
       msg = "It's a tie."
       break;
   }
-  $("#msg").append(msg);
+  $("#msg").text(msg);
 }
 
 function resetButtons(){

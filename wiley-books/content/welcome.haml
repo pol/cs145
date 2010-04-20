@@ -4,12 +4,26 @@ filter: haml
 extension: html
 ---
 
-%h1.span-20.last.big-text
-  Welcome to the<br />Wiley Book Shop
+%h1.span-20.last
+  Welcome to theWiley Book Shop
 
-.bottom
-  .big-quote.span-3
-    &#147;
+.span-14.border
+  %h2.title Featured Book
+  .book
+    %img(src='images/oldbook-lg.png')
+    %h2 The Way of Battle
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. 
+    .book
+      %h3 Rare and Unusual
+      %img(src='images/oldbook-inside.png')
 
-  %h1.span-17.last
-    I did have some strange ideas during certain periods of time.  -- John Nash
+.span-5.prepend-1.last
+  %h2 Upcoming Event
+  .event
+  %h3 RPS Tournament of Champions
+  %img(src='images/rps-poster.png')
+  %p
+    Saturday, July 19th!

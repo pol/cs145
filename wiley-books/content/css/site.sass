@@ -5,7 +5,7 @@ layout:    nil   # no layout
 ---
 
 // Color Variables
-!background = #181818
+!background = #D3D3D3
 !lightslate = #2C2C2C
 !border     = #DDD
 !header     = #666
@@ -13,17 +13,16 @@ layout:    nil   # no layout
 !link_hover = #000
 !blockquote = #666
 !box_bg     = #EEE
-!highlight  = #B2CCFF
+!highlight  = #2C2C2C
 !quiet      = #666
 !alt        = #666
-!homecolor  = #F0F
 
 // Body
 body 
   font-family: Garamond, serif
   background-color = !background
   min-width: 960px
-  color: #FFF
+  color: #000
   padding-bottom: 120px
 
 .container
@@ -33,7 +32,6 @@ body
 // Headings
 h1,h2,h3,h4,h5,h6 
   color = !header
-  margin-bottom: 5px
 
 // Text Elements
 a
@@ -57,7 +55,7 @@ hr
 
 // Size
 .big-text
-  font-size: 6em
+  font-size: 5em
 
 // Tables
 table 
@@ -70,6 +68,8 @@ th,td
 
 // Default Classes
 p
+  font-size: 1.2em
+  line-height: 1em
   .quiet 
     color = !quiet
   .title
@@ -89,6 +89,7 @@ p
 
 #front-game
   margin-top: 290px
+  color: #FFFFFF
   
 #default-game
   position: absolute
@@ -97,46 +98,58 @@ p
 
 #logo
   position: absolute
-  bottom: 10px
-  right: 10px
+  top: 0px
+  right: 0px
+  padding: 10px
+  background-color= !lightslate
+  //  bottom: 10px
+  //  right: 10px
   
+!nav_home   = #8f6a53
+!nav_about  = #69b205
+!nav_picks  = #b213a0
+!nav_events = #6662a2
+!nav_books  = #b2aa34
+!nav_gear   = #52a3b2
+
 // Navigation Strip
 #navigation
   position: absolute
   right: 0px
   height: 100%
-  width: 120px
+  width: 100px
   background-color: #000
-  #edge
-    background-color = !lightslate
-    width: 50%
-    height: 100%
-    float: left
+  border-left= "10px solid #{!lightslate}" 
+  border-right= "10px solid #{!lightslate}" 
+  text-align: center
+  color= !lightslate
   #tabs
-    float: left
-    width: 50%
-    padding-top: 7px
+    width: 100px
+    padding-top: 115px
     div
-      margin-right: 20px
-      margin-top: 5px
-      padding: 2px 0px 2px 10px
-      border = "3px solid #{!lightslate}"
-      border-left = "5px solid #{!lightslate}"
+      margin: 10px
+      border = "1px solid #{!lightslate}"
       font-size: 1.2em
       font-weight: bold
       text-transform: uppercase
-      line-height: 1.1em
+      color: #000000
       &.home 
-        background-color = !homecolor
+        background-color= !nav_home
       &.about 
-        background-color: #0F0
+        background-color= !nav_about
+      &.picks
+        background-color= !nav_picks
       &.events 
-        background-color: #0FF
+        background-color= !nav_events
       &.books
-        background-color: #FF0
+        background-color= !nav_books
+      &.gear
+        background-color= !nav_gear
       &:hover
-        padding-left: 15px
-        margin-right: 15px
+        border-color: #FFFFFF
+      &.selected
+        border-color: #DBD43B
+        
     a
       text-decoration: none
       color: black
@@ -159,7 +172,19 @@ p
   
 #book
   text-align: center
-  
-.thumbnail
-  float: left
-  margin: 5px 10px 5px 5px
+
+.book,.event,.gear,.pick
+  img
+    float: left
+    margin-right: 10px
+  .bigthumb
+    width: 300px
+    height: 400px
+    background-color: red
+    float: left
+  &.thumb
+    width: 100px
+    height: 150px
+    background-color: red
+    float: left
+    margin: 5px 10px 5px 5px

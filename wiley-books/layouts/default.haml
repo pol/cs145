@@ -21,20 +21,8 @@ filter:    haml
     %script(type="text/javascript" src="js/jquery-1.4.2.min.js")
     %script(type="text/javascript" src="js/rockpaperscissors.js")
   %body
-    #navigation
-      #edge
-      #tabs
-        .home
-          %a(href='welcome.html')=      vertical_text("home")
-        .about
-          %a(href='text_heavy.html')=   vertical_text("about")
-        .events
-          %a(href='welcome.html')=      vertical_text("events")
-        .books
-          %a(href='image_heavy.html')=  vertical_text("books")
-          
+    #navigation= render(:partial => 'navigation')
     #default-game= render(:partial => 'game')
-
     %img(id='logo' src='images/wiley-logo-blue.png')
 
     .container= @content
