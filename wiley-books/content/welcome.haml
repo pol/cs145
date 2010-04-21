@@ -4,26 +4,43 @@ filter: haml
 extension: html
 ---
 
-%h1.span-20.last
-  Welcome to the Wiley Book Shop
+.span-10.prepend-1
+  %img(src='images/oldbook-lg.png' width='400px')
+.span-1
+.prepend-1.span-8.last
+  %h1 Welcome to the Wiley Bookshop
+  .span-3.border
+    .rock
+      %img(src='images/rock.png') 
+    .paper
+      %img(src='images/paper.png')
+    .scissors
+      %img(src='images/scissors.png')
+  .span-4.last
+    %p Rocks are strong.
+    %p Books are made of paper.
+    %p Scissors should not be run with.
+/ %h1.span-19.last
+/   Welcome to the Wiley Book Shop
+/ 
+/ .span-14
+/   %h2.title Featured Book of the Month
+/   .book
+/     %img(src='images/oldbook-lg.png' height='364px')
+/     %h3.title The Way of Battle
+/     %p
+/       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+/       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+/       laboris nisi ut aliquip ex ea commodo consequat. 
+/     .book
+/       %h3 Rare and Unusual
+/       %img(src='images/oldbook-inside.png')
+/ 
+/ .span-6.last
+/   %h2 Upcoming Event
+/   .event
+/   %h3 RPS Tournament of Champions
+/   %img(src='images/rps-poster.png')
+/   %p
+/     Saturday, July 19th!
 
-.span-14.border
-  %h2.title Featured Book
-  .book
-    %img(src='images/oldbook-lg.png' height='300px')
-    %h2 The Way of Battle
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-      laboris nisi ut aliquip ex ea commodo consequat. 
-    .book
-      %h3 Rare and Unusual
-      %img(src='images/oldbook-inside.png')
-
-.span-5.prepend-1.last
-  %h2 Upcoming Event
-  .event
-  %h3 RPS Tournament of Champions
-  %img(src='images/rps-poster.png')
-  %p
-    Saturday, July 19th!

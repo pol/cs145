@@ -4,6 +4,7 @@ filter:    sass
 layout:    nil   # no layout
 ---
 
+
 // Color Variables
 !background = #D3D3D3
 !lightslate = #2C2C2C
@@ -13,17 +14,25 @@ layout:    nil   # no layout
 !link_hover = #000
 !blockquote = #666
 !box_bg     = #EEE
-!highlight  = #2C2C2C
+!highlight  = #AAA
 !quiet      = #666
 !alt        = #666
+!text       = #000
+!logo       = #404EA8
+
+!nav_home   = #8f6a53
+!nav_about  = #69b205
+!nav_picks  = #b213a0
+!nav_events = #6662a2
+!nav_books  = #b2aa34
+!nav_gear   = #52a3b2
 
 // Body
 body 
-  font-family: Garamond, serif
+  font-family: Palatino Linotype, Book Antiqua, Palatino, Garamond, Georgia, serif
   background-color = !background
   min-width: 960px
-  color: #000
-  padding-bottom: 120px
+  color= !text
 
 .container
   margin: 0px 120px 120px 10px
@@ -32,7 +41,13 @@ body
 // Headings
 h1,h2,h3,h4,h5,h6 
   color = !header
-
+  margin-left: 10px
+h1
+  border-bottom= "3px solid #{!lightslate}"
+  margin-bottom: 10px
+  margin-top: 20px
+  padding-bottom: 20px
+  
 // Text Elements
 a
   color = !link
@@ -48,6 +63,15 @@ pre
 hr
   background = !highlight
   color =      !highlight
+
+div.border
+  border-right= "1px solid #{!highlight}"
+
+.silver
+  background-color= !lightslate
+  color= !background
+  margin-left: 10px
+  text-align: center
 
 // Alignment
 .center
@@ -101,38 +125,34 @@ p
   top: 0px
   right: 0px
   padding: 10px
-  background-color= !lightslate
+  / background-color= !lightslate + #222
+  background-color: transparent
   //  bottom: 10px
   //  right: 10px
-  
-!nav_home   = #8f6a53
-!nav_about  = #69b205
-!nav_picks  = #b213a0
-!nav_events = #6662a2
-!nav_books  = #b2aa34
-!nav_gear   = #52a3b2
 
 // Navigation Strip
 #navigation
   position: absolute
   right: 0px
   height: 100%
-  width: 100px
-  background-color: #000
-  border-left= "10px solid #{!lightslate}" 
-  border-right= "10px solid #{!lightslate}" 
+  width: 110px
+  background-color: transparent
+  / border-left= "10px solid #{!lightslate + #222}" 
+  / border-right= "10px solid #{!lightslate + #222}" 
+  border-left= "5px solid #{!lightslate + #222}" 
+  border-right= "5px solid #{!lightslate + #222}" 
   text-align: center
-  color: #D3D3D3
+  color= !text
   #tabs
-    width: 100px
+    width: 110px
     padding-top: 115px
     div
       margin: 10px
-      border = "3px solid #{!lightslate}"
+      border = "3px solid transparent"
       font-size: 1.2em
       font-weight: bold
       text-transform: uppercase
-      color: #000000
+      color= !text
       &.home 
         background-color= !nav_home
       &.about 
@@ -146,9 +166,9 @@ p
       &.gear
         background-color= !nav_gear
       &:hover
-        border: 3px solid #D3D3D3
+        border= "3px solid #{!text}"
       &.selected
-        border: 3px solid #D3D3D3
+        border= "3px solid #{!text}"
         
     a
       text-decoration: none
