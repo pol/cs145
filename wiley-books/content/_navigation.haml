@@ -1,15 +1,17 @@
 ---
 extension: html
-filter:    haml
+filter: 
+  - erb
+  - haml
 ---
 #tabs
-  .home
+  .home<%= '.selected' if (@page.name == 'welcome') %>
     %a(href='welcome.html') 
       home
-  .picks
+  .picks<%= '.selected' if (@page.name == 'picks') %>
     %a(href='picks.html') 
       picks
-  .about.selected
+  .about<%= '.selected' if (@page.name == 'about') %>
     %a(href='about.html')
       about
   .events
@@ -23,7 +25,7 @@ filter:    haml
       gear
 
 <hr />
-
+<%= @page['name'] %>
 Address
 <br />
 232 North Higgins Avenue
