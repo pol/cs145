@@ -4,24 +4,30 @@ filter: haml
 extension: html
 ---
 
-%h1.span-22.last
-  Sam &amp; Sara's Pick of the Month
-
-
-.span-11
-  %h2 Rock, Paper, Scissors - <br />Game Theory in Everyday Life
-  #book
-    %img(alt='Sam and Sara' src='images/book.jpg')
-  %p Games are everwhere.  All around us and through us, we play and are played.  Games are not the exception, but the rule.  
-
-.span-8.prepend-1.append-1.last
-  .pick
-    %img.thumb(alt='Sam and Sara' src='images/sam.png')
-    %h3 Seriously, It Is Excellent
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  %br(clear='all')
-  .pick
-    %img.thumb(alt='Sam and Sara' src='images/sara.png')
-    %h3 My Fancy Has Hereby Been Tickled!  
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+.span-10
+  .book
+    %img.big_book(src='images/moon_fish_ocean.jpg' width='350px' )
+  .span-6
+    .book
+      %img(src='images/mfo-cover.jpg' width='200')  
+  .span-4.last
+    .book
+      %img(src='images/rules_rinzai_on.jpg' width='103')
+      %img(src='images/rules_on.jpg' width='102')
+.prepend-1.span-9.last
+  %h1 Sam &amp; Sara's Pick of the Month
+  .span-9.last
+    %h3 Moon Fish Ocean -<br />A Zen Conversion of Rock Paper Scissors
+    %p An amazing re-imagining of the universe.  Oddfellow takes what should be a simple thing, and transforms it into a tragic tale of impending beauty.
+    .rock
+      %img(src='images/sam.png') 
+      .span-6.last
+        %h4 Amazing Find
+        This book is incredible, it is basically why we started this in the first place.  Love, loss, precious moments in your life draining away as you peer into the depths of your own soul.
+    %br(clear='all')
+    .paper
+      %img(src='images/sara.png')
+      .span-6.last
+        %h4 Everyone Should Read This Book
+        At first you are thinking "really"? But then it hits you and never lets go.  I was unable to put it down and looked up at the moon and said "why? why would you curse the world with such beauty?"  It is impossible to say.
 
