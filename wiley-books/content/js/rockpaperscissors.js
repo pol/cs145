@@ -6,6 +6,7 @@ $(document).ready(function() {
   $("#"+rps[0]).click(function(){ play(rps[0]); });
   $("#"+rps[1]).click(function(){ play(rps[1]); });
   $("#"+rps[2]).click(function(){ play(rps[2]); });
+  // $("#front-logo").hide()
 });
 
 function play(choice){
@@ -43,6 +44,7 @@ function play(choice){
   switch(consequence){
     case 'win':
       msg = "You win."
+      $('#front-logo').show();
       break;
     case 'lose':
       msg = "You lose."

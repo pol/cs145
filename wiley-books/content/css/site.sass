@@ -34,6 +34,9 @@ body
   min-width: 960px
   color= !text
 
+#spacer
+  width: 960px
+
 // Headings
 h1,h2,h3,h5,h6 
   color = !header
@@ -84,15 +87,6 @@ div.border
 .big-text
   font-size: 5em
 
-// Tables
-table 
-  border-top  = "1px solid #{!border}"
-  border-left = "1px solid #{!border}"
-
-th,td 
-  border-bottom = "1px solid #{!border}"
-  border-right  = "1px solid #{!border}"
-
 // Default Classes
 p
   font-size: 1.2em
@@ -116,9 +110,25 @@ p
     margin-bottom: 0.5em
 
 #front-game
-  margin-top: 290px
-  color: #FFFFFF
-  
+  position: absolute
+  width: 100%
+  top: 50%
+  margin-top: -60px
+
+#front-logo
+  margin-top: 50px
+  text-align: center
+  display: none
+  a
+    text-decoration: none
+    margin: 0px auto
+    width: 150px
+    font-size: 1em
+    display: block
+    color= !lightslate
+    &:hover
+      color= !link
+
 #default-game
   position: absolute
   bottom: 0px
