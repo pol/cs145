@@ -34,10 +34,6 @@ body
   min-width: 960px
   color= !text
 
-.container
-  /margin: 0px 120px 120px 10px
-  /padding-top: 10px
-
 // Headings
 h1,h2,h3,h5,h6 
   color = !header
@@ -132,7 +128,6 @@ p
   top: 0px
   right: 0px
   padding: 10px
-  / background-color= !lightslate + #222
   background-color: transparent
   //  bottom: 10px
   //  right: 10px
@@ -144,8 +139,6 @@ p
   height: 100%
   width: 110px
   background-color: transparent
-  / border-left= "10px solid #{!lightslate + #222}" 
-  / border-right= "10px solid #{!lightslate + #222}" 
   border-left= "5px solid #{!lightslate + #222}" 
   border-right= "5px solid #{!lightslate + #222}" 
   text-align: center
@@ -212,14 +205,7 @@ p
     background-color: red
     float: left
   &.thumb
-    width: 100px
-    height: 150px
-    background-color: red
-    float: left
-    margin: 5px 10px 5px 5px
-
-img.thumb
-  border: 8px solid #2C2C2C
+    margin-top: 10px
   
 .rock, .paper, .scissors
   height: 125px
@@ -228,3 +214,16 @@ img.thumb
     display: block
     margin-right: 10px
     
+.owners
+  img
+    margin: 25px
+    
+.who_are_we
+  margin-top: 25px
+  float: left
+
+.how_it_started
+  margin-left: 25px
+  
+.book_that_began_the_journey
+  margin-top: 10px
