@@ -5,63 +5,80 @@ layout:    nil   # no layout
 ---
 
 !lightslate = #2C2C2C
+!link       = #125AA7
+
 
 // Game Strip
 #game
   height: 100px
   background-color = !lightslate
   padding: 10px
-  div
-    margin-left: 80px
-    width: 100px
+  #game-buttons
+    margin: 0px auto
     height: 100px
-    float: left
-    &#msg
-      color: #FFFFFF
-      line-height: 100px
-    &#rock
-      &.default
-        background-image: url(../images/rock.png)
-        &:hover
-          background-image: url(../images/rock-w.png)        
-      &.pick
-        background-image: url(../images/rock-y.png)
-    &#paper
-      &.default
-        background-image: url(../images/paper.png)
-        &:hover
-          background-image: url(../images/paper-w.png)
-      &.pick
-        background-image: url(../images/paper-y.png)
-    &#scissors
-      &.default
-        background-image: url(../images/scissors.png)
-        &:hover
-          background-image: url(../images/scissors-w.png) 
-      &.pick
-        background-image: url(../images/scissors-y.png)
-    &#result
-      a#welcome_link
-        display: block
-        height: 99px
-        width: 99px
-        margin: auto
-        text-decoration: none    
-      &.rock.win
-        background-image: url(../images/rock-g.png)
-      &.rock.lose
-        background-image: url(../images/rock-r.png)
-      &.rock.draw
-        background-image: url(../images/rock-y.png)
-      &.paper.win
-        background-image: url(../images/paper-g.png)
-      &.paper.lose
-        background-image: url(../images/paper-r.png)
-      &.paper.draw
-        background-image: url(../images/paper-y.png)
-      &.scissors.win
-        background-image: url(../images/scissors-g.png)
-      &.scissors.lose
-        background-image: url(../images/scissors-r.png)
-      &.scissors.draw
-        background-image: url(../images/scissors-y.png)
+    &.initial
+      width: 820px
+    &.final
+      width: 460px
+    div
+      margin-right: 80px
+      width: 100px
+      height: 100px
+      float: left
+      &#msg
+        color: #FFFFFF
+        height: 20px
+        margin-top: 25px
+        text-align: center
+        div
+          height: 20px
+          margin: 0px
+          display: none
+          a
+            color: white
+            height: 48px
+            display: block
+            text-decoration: none
+            &:hover
+              color= !link
+      &#rock
+        &.default
+          background-image: url(../images/rock.png)
+          &:hover
+            background-image: url(../images/rock-w.png)        
+        &.pick
+          background-image: url(../images/rock-y.png)
+      &#paper
+        &.default
+          background-image: url(../images/paper.png)
+          &:hover
+            background-image: url(../images/paper-w.png)
+        &.pick
+          background-image: url(../images/paper-y.png)
+      &#scissors
+        &.default
+          background-image: url(../images/scissors.png)
+          &:hover
+            background-image: url(../images/scissors-w.png) 
+        &.pick
+          background-image: url(../images/scissors-y.png)
+      &#result  
+        margin-right: 0px
+        &.rock.win
+          background-image: url(../images/rock-g.png)
+        &.rock.lose
+          background-image: url(../images/rock-r.png)
+        &.rock.draw
+          background-image: url(../images/rock-y.png)
+        &.paper.win
+          background-image: url(../images/paper-g.png)
+        &.paper.lose
+          background-image: url(../images/paper-r.png)
+        &.paper.draw
+          background-image: url(../images/paper-y.png)
+        &.scissors.win
+          background-image: url(../images/scissors-g.png)
+        &.scissors.lose
+          background-image: url(../images/scissors-r.png)
+        &.scissors.draw
+          background-image: url(../images/scissors-y.png)

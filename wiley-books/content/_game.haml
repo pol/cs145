@@ -3,9 +3,22 @@ filter: haml
 ---
 
 #game
-  #rock.default
-  #paper.default
-  #scissors.default
-  #msg
-  #result
+  #game-buttons.initial
+    #rock.default
+    #paper.default
+    #scissors.default
+    #msg
+      #win
+        %a(href='welcome.html')
+          You win,<br />
+          good job!
+      #lose
+        %a(href='welcome.html')
+          You lose,<br />
+          try harder.
+      #draw
+        %a(href='welcome.html')
+          It's a tie,<br />
+          so close!
+    #result
   
