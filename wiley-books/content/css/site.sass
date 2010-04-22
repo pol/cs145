@@ -35,11 +35,11 @@ body
   color= !text
 
 .container
-  margin: 0px 120px 120px 10px
-  padding-top: 10px
+  /margin: 0px 120px 120px 10px
+  /padding-top: 10px
 
 // Headings
-h1,h2,h3,h4,h5,h6 
+h1,h2,h3,h5,h6 
   color = !header
   margin-left: 10px
 h1
@@ -47,6 +47,13 @@ h1
   margin-bottom: 10px
   margin-top: 20px
   padding-bottom: 20px
+  text-align: center
+  
+h4
+  font-weight: bold
+  font-style: italic
+  margin-bottom: 5px
+  
   
 // Text Elements
 a
@@ -196,7 +203,9 @@ p
 .book,.event,.gear,.pick
   img
     float: left
-    margin-right: 10px
+    margin: 10px
+  .big_book
+    margin-top: 20px
   .bigthumb
     width: 300px
     height: 400px
@@ -211,3 +220,11 @@ p
 
 img.thumb
   border: 8px solid #2C2C2C
+  
+.rock, .paper, .scissors
+  height: 125px
+  img
+    float: left
+    display: block
+    margin-right: 10px
+    
