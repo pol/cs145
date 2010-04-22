@@ -5,8 +5,6 @@ extension: html
 ---
 
 .span-10
-  .book
-    %img.big_book(src='images/moon_fish_ocean.jpg' width='350px' )
   .span-6
     .book
       %img(src='images/mfo-cover.jpg' width='200')  
@@ -14,20 +12,26 @@ extension: html
     .book
       %img(src='images/rules_rinzai_on.jpg' width='103')
       %img(src='images/rules_on.jpg' width='102')
-.prepend-1.span-9.last
-  %h1 Sam &amp; Sara's Pick of the Month
+  .new_pick_text.span-10
+    %h3 New book from independent book seller -
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+.span-9.last
+  %h1 Sam &amp; Sara's<br/>Pick of the Month
   .span-9.last
     %h3 Moon Fish Ocean -<br />A Zen Conversion of Rock Paper Scissors
     %p An amazing re-imagining of the universe.  Oddfellow takes what should be a simple thing, and transforms it into a tragic tale of impending beauty.
     .rock
       %img(src='images/sam.png') 
       .span-6.last
-        %h4 Amazing Find
-        This book is incredible, it is basically why we started this in the first place.  Love, loss, precious moments in your life draining away as you peer into the depths of your own soul.
+        %h4 "Amazing Find"
+        %p
+          "This book is incredible, it is basically why we started this in the first place.  Love, loss, precious moments in your life draining away as you peer into the depths of your own soul."
     %br(clear='all')
     .paper
       %img(src='images/sara.png')
       .span-6.last
-        %h4 Everyone Should Read This Book
-        At first you are thinking "really"? But then it hits you and never lets go.  I was unable to put it down and looked up at the moon and said "why? why would you curse the world with such beauty?"  It is impossible to say.
+        %h4 "Everyone Should Read This Book"
+        %p
+          "At first you're thinking, 'really?' But then it hits you and never lets go. I was unable to put it down and looked up at the moon and said, 'WWhy would you curse the world with such beauty?!'  It is impossible to say."
 
