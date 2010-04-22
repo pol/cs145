@@ -35,20 +35,20 @@ body
   color= !text
 
 // Headings
-h1,h2,h3,h5,h6 
+h1,h2,h3,h4,h5,h6 
   color = !header
   margin-left: 10px
+  margin-bottom: 5px
 h1
-  border-bottom= "3px solid #{!lightslate}"
-  margin-bottom: 10px
+  border-bottom= "1px solid #{!lightslate}"
+  margin-bottom: 20px
   margin-top: 20px
   padding-bottom: 20px
-  text-align: center
+  font-size: 2.5em
   
-h4
+.subtitle
   font-weight: bold
-  font-style: italic
-  margin-bottom: 5px
+
   
   
 // Text Elements
@@ -95,8 +95,6 @@ th,td
 
 // Default Classes
 p
-  font-size: 1.2em
-  line-height: 1em
   margin-left: 10px
   .quiet 
     color = !quiet
@@ -138,14 +136,13 @@ p
   position: absolute
   right: 0px
   height: 100%
-  width: 110px
+  width: 120px
   background-color: transparent
-  border-left= "5px solid #{!lightslate + #222}" 
-  border-right= "5px solid #{!lightslate + #222}" 
+  border-left= "1px solid #{!lightslate + #222}"  
   text-align: center
   color= !text
   #tabs
-    width: 110px
+    width: 120px
     padding-top: 115px
     div
       margin: 10px
@@ -225,3 +222,6 @@ p
 
 .book_that_began_the_journey
   margin-top: 10px
+  
+.new_pick_text
+  margin-top: 25px
