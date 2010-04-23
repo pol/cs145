@@ -20,10 +20,10 @@ layout:    nil   # no layout
 !text       = #000
 !logo       = #404EA8
 
-!nav_home   = #8f6a53
+!nav_home   = #ac8466
 !nav_about  = #69b205
-!nav_picks  = #b213a0
-!nav_events = #6662a2
+!nav_picks  = #be73c3
+!nav_events = #717bca
 !nav_books  = #b2aa34
 !nav_gear   = #52a3b2
 
@@ -52,8 +52,6 @@ h1
 .subtitle
   font-weight: bold
 
-  
-  
 // Text Elements
 a
   color = !link
@@ -112,6 +110,29 @@ p
   top: 50%
   margin-top: -60px
 
+#slide-game
+  position: absolute
+  width: 100%
+  margin-left: -100%
+  top: 50%
+  margin-top: -60px
+
+#play-button
+  position: absolute
+  height: 120px
+  margin-top: -60px
+  top: 50%
+  left: 0px
+  background-color= !lightslate
+  color: white
+  width: 20px
+  font-size: 20px
+  text-align: center
+  &:hover
+    color: #f2e24c
+    cursor: pointer
+
+
 #front-logo
   display: none
   width: 820px
@@ -124,12 +145,7 @@ p
     display: block
     color= !lightslate
     &:hover
-      color= !link
-
-#default-game
-  position: absolute
-  bottom: 0px
-  width: 100%
+      color= !link  
 
 #logo
   position: absolute
@@ -192,15 +208,21 @@ p
   color = !header
   margin-top: -60px
 
-// Image of Sam and Sara
-#sam_and_sara
+.left
   float: left
   margin-right: 10px
   
+.right
+  float: right
+  margin-left: 10px
+
+.gallery
+  margin: 10px
+
 #book
   text-align: center
 
-.book,.event,.gear,.pick
+.book
   img
     float: left
     margin: 10px
@@ -211,8 +233,14 @@ p
     height: 400px
     background-color: red
     float: left
-  &.thumb
+
+.pick
+  img
     margin-top: 10px
+
+.thumb
+  margin-left: 10px
+  margin-bottom: 10px
   
 .rock, .paper, .scissors
   height: 125px
@@ -225,12 +253,9 @@ p
   img
     margin-top: 25px
     
-.who_are_we
-  margin-top: 25px
+.who-are-we
+  margin-top: 30px
   float: left
 
-.book_that_began_the_journey
-  margin-top: 10px
-  
 .new_pick_text
   margin-top: 25px
