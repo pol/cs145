@@ -22,6 +22,8 @@
 //   a convenience array of rock, paper, scissors strings 
 // msg [Array]
 //   a convenience array of win, lose, draw consequences 
+// score [Hash]
+//   a hash to store the score
 //
 // @author Pol Llovet
 // 
@@ -29,6 +31,11 @@
 //
 var rps = ["rock","paper","scissors"];
 var msg = ["win","lose","draw"];
+var score = {
+  'win':0,
+  'lose':0,
+  'draw':0
+};
 
 //// 
 // Initialize the game when the document is ready
@@ -46,19 +53,18 @@ $(document).ready(function() {
   bodyWidth = $('body').width();
   $('#play-button').click(slidePlay);
   
-  //Check and init session vars
-  if($.session("win") == undefined){
-    $.session("win", 1);
+  // Check and init session vars
+  // Clear score cookie if getvar is passed
+  if($.getUrlVar('clearscore') != undefined){
+    $.cookie('win', 0);
+    $.cookie('lose', 0);
+    $.cookie('draw', 0);
+  }else{
+    score['win']  = $.cookie('win');
+    score['lose'] = $.cookie('lose');
+    score['draw'] = $.cookie('draw');
   };
-  if($.session("lose") == undefined){
-    $.session("lose", 1);
-  };
-  if($.session("draw") == undefined){
-    $.session("draw", 1);
-  };
-  
-  updateScore();
-  
+  renderScore();
 });
 
 //// 
@@ -144,17 +150,17 @@ function play(choice){
   switch(consequence){
     case 'win':
       msg = "You win, well done.";
-      $.session("win",$.session("win")+1);
+      score['win']++;
       $('#win').fadeIn("slow");
       break;
     case 'lose':
       msg = "You lose, try harder.";
-      $.session("lose",$.session("lose")+1);
+      score['lose']++;
       $('#lose').fadeIn("slow");
       break;
     case 'draw':
       msg = "It's a draw, so close!";
-      $.session("draw",$.session("draw")+1);
+      score['draw']++;
       $('#draw').fadeIn("slow");
       break;
   }
@@ -181,14 +187,28 @@ function resetButtons(){
 }
 
 //// 
-// Update the score elements with the session stored values
+// Update the cookie score values with the current values, then render the current values
 //
 // @author Pol Llovet
 // 
 // @api public
 //
 function updateScore(){
-  $('#win-score').text($.session('win') - 1);
-  $('#lose-score').text($.session('lose') - 1);
-  $('#draw-score').text($.session('draw') - 1);
-}
+  $.cookie('win', score['win']);
+  $.cookie('lose', score['lose']);
+  $.cookie('draw', score['draw']);
+  renderScore();
+};
+
+//// 
+// Update the score elements with the score values
+//
+// @author Pol Llovet
+// 
+// @api public
+//
+function renderScore(){
+  $('#win-score').text($.cookie('win'));
+  $('#lose-score').text($.cookie('lose'));
+  $('#draw-score').text($.cookie('draw'));
+};
