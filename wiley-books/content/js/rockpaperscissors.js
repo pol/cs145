@@ -7,7 +7,45 @@ $(document).ready(function() {
   $("#"+rps[0]).click(function(){ play(rps[0]); });
   $("#"+rps[1]).click(function(){ play(rps[1]); });
   $("#"+rps[2]).click(function(){ play(rps[2]); });
+  
+  bodyWidth = $('body').width();
+  $('#play-button').click(slidePlay);
+  
+  //Check and init session vars
+  if($.session("win") == undefined){
+    $.session("win", 1);
+  };
+  if($.session("lose") == undefined){
+    $.session("lose", 1);
+  };
+  if($.session("draw") == undefined){
+    $.session("draw", 1);
+  };
+  
+  updateScore();
+  
 });
+
+slidePlay = function(){
+  $('#slide-game').animate({
+    left: '+=' + bodyWidth,
+  }, 1000, function() {
+    $('#play-button').text('D O N E');
+    $('#play-button').unbind('click');
+    $('#play-button').click(unslidePlay);
+  });
+}
+
+unslidePlay = function(){
+  $('#slide-game').animate({
+    left: '-=' + bodyWidth,
+  }, 1000, function() {
+    $('#play-button').text('P L A Y');
+    $('#play-button').unbind('click');
+    resetButtons();
+    $('#play-button').click(slidePlay);
+  });
+}
 
 function play(choice){
   var rand = Math.floor(Math.random()*3);
@@ -16,13 +54,6 @@ function play(choice){
   var msg = '';
   resetButtons();
 
-  // for(i in rps){
-  //   if(rps[i] != choice){
-  //     $("#"+rps[i]).fadeOut("slow");
-  //   }
-  // }
-  // $("#game-buttons").addClass("final");
-  // $("#game-buttons").removeClass("initial");
   $("#"+choice).addClass("pick");
   $("#"+choice).removeClass("default");
   $("#result").addClass(result);
@@ -32,36 +63,42 @@ function play(choice){
     if(result == 'paper'){
       consequence = 'lose';      
     }else if (result == 'scissors'){
-      consequence = 'win'
+      consequence = 'win';
     }
   }else if(choice == 'paper'){
     if(result == 'scissors'){
       consequence = 'lose';      
     }else if (result == 'rock'){
-      consequence = 'win'
+      consequence = 'win';
     }
   }else if(choice == 'scissors'){
     if(result == 'rock'){
       consequence = 'lose';      
     }else if (result == 'paper'){
-      consequence = 'win'
+      consequence = 'win';
     }
   }
   $("#result").addClass(consequence);
   
   switch(consequence){
     case 'win':
-      msg = "You win."
+      msg = "You win, well done.";
+      $.session("win",$.session("win")+1);
       $('#win').fadeIn("slow");
       break;
     case 'lose':
+      msg = "You lose, try harder.";
+      $.session("lose",$.session("lose")+1);
       $('#lose').fadeIn("slow");
       break;
     case 'draw':
+      msg = "It's a draw, so close!";
+      $.session("draw",$.session("draw")+1);
       $('#draw').fadeIn("slow");
       break;
   }
   $('#front-logo').fadeIn("slow");
+  updateScore();
 }
 
 function resetButtons(){
@@ -73,4 +110,10 @@ function resetButtons(){
     $('#'+msg[i]).slideUp().fadeOut('slow');
     $("#result").removeClass(msg[i])
   }
+}
+
+function updateScore(){
+  $('#win-score').text($.session('win') - 1);
+  $('#lose-score').text($.session('lose') - 1);
+  $('#draw-score').text($.session('draw') - 1);
 }
