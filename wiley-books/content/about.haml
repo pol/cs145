@@ -5,33 +5,33 @@ extension: html
 ---
 
 .span-10
-  .who_are_we.span-10.last
+  .who-are-we.span-10.last
     %h1 Who are we?
-    %img#big_book(alt='Sam and Sara' src='images/samsara.png' width="175")
+    %img.left.thumb(alt='Sam and Sara' src='images/samsara.png')
+    %h3 Sam & Sara
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed molestie fermentum leo, eget dictum arcu bibendum sit amet. 
-  .how_it_started.span-10.last
+  .span-10.last
     %h3 How it all started...
+    %a.fancybox(href='images/books/wob/wob-inside.png')
+      %img.right.thumb(src='images/books/wob/wob-inside-sm.png')
     %p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-.prepend-1.span-9.last
+.span-10.last
   %h1 About the<br/>Wiley Book Shop
-  .span-3
-    %img.book.thumb(src='images/oldbook-lg.png' width='125px')
-  .book_that_began_the_journey.span-6.last
+  .span-10.last
+    %a.fancybox(href='images/books/wob/wob-cover.png')
+      %img.left.thumb(src='images/books/wob/wob-cover-sm.png')
     %h3 The book that began the journey...
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-/ %h1.span-22.last.about-title
-/   About The Wiley Book Shop
-/ .span-11
-/   %img#sam_and_sara(alt='Sam and Sara' src='images/samsara.png')
-/   %h3 Who We Are
-/   %p Oh, you know, just two people that love books.  And I mean *really* love books.  We think that books are basically the only thing standing between a hot cup of coffee and oblivion.  
-/   %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-/ .span-11.last
-/   %h3 Where is the shop?
-/   %img(src='images/map.png')
-/   %h3 Hours
-/   %p 7AM - 2AM Monday - Sunday.  
-
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  .span-10
+    %h1 Where are we?
+  .span-5
+    %h3 Address
+    %p 
+      232 North Higgins<br />Missoula, MT 59802-4435<br />406-728-8780<br />
+      %a#gmap(href='http://maps.google.com/maps?hl=en&client=firefox-a&ie=UTF8&q=232+North+Higgins,+missoula+mt&fb=1&gl=us&hnear=&cid=0,0,5574034720807332466&ei=4zPRS_STBoaMswOtpunFCQ&ved=0CAcQnwIwAA&hq=232+North+Higgins,+missoula+mt&ll=46.872074,-113.993883&spn=0.008317,0.014956&t=h&z=16&iwloc=A') Directions
+    %h3 Hours
+    %p 7AM - 12AM Monday - Saturday.
+  .span-5.last
+    %a.fancybox(href='images/map.png') 
+      %img(src='images/map_s.png')
+    
