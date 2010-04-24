@@ -13,7 +13,8 @@
 //    #win-score, #lose-score, #draw-score elements.  These are optional. The score does not
 //    persist past pageviews.
 // 
-// This requires jQuery
+// This requires jQuery and the jQuery cookie plugin
+// This could also use some serious refactoring. :P
 
 //// 
 // Globals
@@ -27,8 +28,6 @@
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 var rps = ["rock","paper","scissors"];
 var msg = ["win","lose","draw"];
 var score = {
@@ -42,8 +41,6 @@ var score = {
 // 
 // @author Pol Llovet
 // 
-// @api public
-// 
 $(document).ready(function() {
   //TODO: There has to be a better way to do this
   $("#"+rps[0]).click(function(){ play(rps[0]); });
@@ -51,7 +48,8 @@ $(document).ready(function() {
   $("#"+rps[2]).click(function(){ play(rps[2]); });
   
   bodyWidth = $('body').width();
-  $('#play-button').click(slidePlay);
+  $('#playbutton').click(slidePlay);
+  $('#playbutton').hover(slidePlayButton, unslidePlayButton);
   
   // Check and init session vars
   // Clear score cookie if getvar is passed
@@ -68,20 +66,39 @@ $(document).ready(function() {
 });
 
 //// 
+// Hover-in playbutton animation
+// 
+// @author Pol Llovet
+// 
+slidePlayButton = function(){
+  $('#playbutton').animate({
+    left: '+=40'
+  }, 200)
+}
+
+//// 
+// Hover-out playbutton animation
+// 
+// @author Pol Llovet
+// 
+unslidePlayButton = function(){
+  $('#playbutton').animate({
+    left: '-=40'
+  }, 200)
+}
+
+//// 
 // Open the sliding game, and reset the button to slide the game closed if clicked
 // Assign this behavior to an anonymous function so it can be passed
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 slidePlay = function(){
+  $('#playbutton').unbind('click');
   $('#slide-game').animate({
     left: '+=' + bodyWidth,
   }, 1000, function() {
-    $('#play-button').text('D O N E');
-    $('#play-button').unbind('click');
-    $('#play-button').click(unslidePlay);
+    $('#playbutton').click(unslidePlay);
   });
 }
 
@@ -91,18 +108,25 @@ slidePlay = function(){
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 unslidePlay = function(){
+  $('#playbutton').unbind('click');
   $('#slide-game').animate({
     left: '-=' + bodyWidth,
   }, 1000, function() {
-    $('#play-button').text('P L A Y');
-    $('#play-button').unbind('click');
     resetButtons();
-    $('#play-button').click(slidePlay);
+    $('#playbutton').click(slidePlay);
   });
 }
+
+//// 
+// Fade-in animation anonymous functions for message divs
+// 
+// @author Pol Llovet
+// 
+win_msg  = function(){$('#win').fadeIn('slow');};
+lose_msg = function(){$('#lose').fadeIn('slow');};
+draw_msg = function(){$('#draw').fadeIn('slow');};
+
 
 //// 
 // The main function that contains the game logic
@@ -112,8 +136,6 @@ unslidePlay = function(){
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 function play(choice){
   var rand = Math.floor(Math.random()*3);
   var result = rps[rand];
@@ -151,17 +173,17 @@ function play(choice){
     case 'win':
       msg = "You win, well done.";
       score['win']++;
-      $('#win').fadeIn("slow");
+      $('#msg > div:visible').fadeOut('fast', win_msg);
       break;
     case 'lose':
       msg = "You lose, try harder.";
       score['lose']++;
-      $('#lose').fadeIn("slow");
+      $('#msg > div:visible').fadeOut('fast', lose_msg);
       break;
     case 'draw':
       msg = "It's a draw, so close!";
       score['draw']++;
-      $('#draw').fadeIn("slow");
+      $('#msg > div:visible').fadeOut('fast', draw_msg);
       break;
   }
   $('#front-logo').fadeIn("slow");
@@ -173,15 +195,12 @@ function play(choice){
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 function resetButtons(){
   for(i in rps){
     $('#'+rps[i]).removeClass('pick').addClass('default');
     $("#result").removeClass(rps[i])
   }
   for(i in msg){
-    $('#'+msg[i]).slideUp().fadeOut('slow');
     $("#result").removeClass(msg[i])
   }
 }
@@ -191,8 +210,6 @@ function resetButtons(){
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 function updateScore(){
   $.cookie('win', score['win']);
   $.cookie('lose', score['lose']);
@@ -205,8 +222,6 @@ function updateScore(){
 //
 // @author Pol Llovet
 // 
-// @api public
-//
 function renderScore(){
   $('#win-score').text($.cookie('win'));
   $('#lose-score').text($.cookie('lose'));
