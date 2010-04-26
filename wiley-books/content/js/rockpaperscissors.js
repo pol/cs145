@@ -126,6 +126,7 @@ unslidePlay = function(){
 win_msg  = function(){$('#win').fadeIn('slow');};
 lose_msg = function(){$('#lose').fadeIn('slow');};
 draw_msg = function(){$('#draw').fadeIn('slow');};
+blank_msg = function(){$('#blank').fadeIn('slow');};
 
 
 //// 
@@ -201,7 +202,7 @@ function resetButtons(){
     $("#result").removeClass(rps[i])
   }
   for(i in msg){
-    $("#result").removeClass(msg[i])
+    $('#msg > div:visible').fadeOut('fast', blank_msg);
   }
 }
 
