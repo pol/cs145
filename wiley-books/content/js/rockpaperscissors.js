@@ -201,9 +201,7 @@ function resetButtons(){
     $('#'+rps[i]).removeClass('pick').addClass('default');
     $("#result").removeClass(rps[i])
   }
-  for(i in msg){
-    $('#msg > div:visible').fadeOut('fast', blank_msg);
-  }
+  $('#msg > div:visible').fadeOut('fast', blank_msg);
 }
 
 //// 
