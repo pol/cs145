@@ -116,6 +116,7 @@ unslidePlay = function(){
     resetButtons();
     $('#playbutton').click(slidePlay);
   });
+  $('#msg > div:visible').fadeOut('fast', blank_msg);
 }
 
 //// 
@@ -199,9 +200,11 @@ function play(choice){
 function resetButtons(){
   for(i in rps){
     $('#'+rps[i]).removeClass('pick').addClass('default');
-    $("#result").removeClass(rps[i])
+    for(j in msg){
+      $("#result").removeClass(rps[i]).removeClass(msg[j]);
+    }
   }
-  $('#msg > div:visible').fadeOut('fast', blank_msg);
+  // 
 }
 
 //// 
