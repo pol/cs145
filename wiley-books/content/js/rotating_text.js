@@ -1,8 +1,20 @@
 // This requires skillz
-var rock_definitions = ['I. 1. a. A large rugged mass of stone forming a cliff, crag, or natural prominence on land or in the sea.',
-                        '2. orig. U.S. a. Musical rhythm characterized by a strong beat.'];
-var paper_definitions = ['heirushfiusahgf', 'sdiufghadisufghiadghsfiuasdiufgiuasdgf'];
-var scissors_definitions = ['cow cow', 'moo moo'];
+var rock_definitions = ['2. a. A large rugged mass of stone forming a cliff, crag, or natural prominence on land or in the sea.',
+                        '3. orig. U.S. a. Musical rhythm characterized by a strong beat.',
+                        '4. stone in the mass: buildings that stand upon rock.',
+                        '5. a stone of any size.',
+                        '6. something resembling or suggesting a rock.',
+                        '7. a firm foundation or support: The Lord is my rock.',
+                        '8. Chiefly British. a kind of hard candy, variously flavored.'];
+var paper_definitions = ['2. a piece, sheet, or leaf of this.', 
+                         '3. something resembling this substance, as papyrus.',
+                         '4. a written or printed document or the like.',
+                         '5. stationery; writing paper.',
+                         '6. an essay, article, or dissertation on a particular topic: a paper on early Mayan artifacts.',
+                         '7. Often, papers. a document establishing or verifying identity, status, or the like: citizenship papers.',
+                         '8. negotiable notes, bills, etc., as commercial paper or paper money: Only silver, please, no paper.'];
+var scissors_definitions = ['2. (used with a singular verb) Gymnastics. any of several feats in which the legs execute a scissorlike motion.',
+                            '3. (used with a singular verb) Wrestling. a hold secured by clasping the legs around the body or head of the opponent.'];
 var increments = {"#rock_text":0, "#paper_text":0, "#scissors_text":0};
 
 $(document).ready(function() {
