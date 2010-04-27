@@ -27,7 +27,8 @@ filter:    haml
     %script(type="text/javascript" src="../js/rotating_text.js")
   %body
     #navigation= render(:partial => '/navigation')
-    %img(id='logo' src='../images/wiley-logo-blue.png')
+    .logo
+      %img(id='logo' src='../images/wiley-logo-blue.png' alt='Wiley Bookshop')
 
     .container= @content
 
