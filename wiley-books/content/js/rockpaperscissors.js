@@ -54,9 +54,7 @@ $(document).ready(function() {
   // Check and init session vars
   // Clear score cookie if getvar is passed
   if($.getUrlVar('clearscore') != undefined){
-    $.cookie('win', 0);
-    $.cookie('lose', 0);
-    $.cookie('draw', 0);
+    clearScore();
   }else{
     score['win']  = $.cookie('win');
     score['lose'] = $.cookie('lose');
@@ -64,6 +62,7 @@ $(document).ready(function() {
   };
   renderScore();
 });
+
 
 //// 
 // Hover-in playbutton animation
@@ -217,6 +216,17 @@ function updateScore(){
   $.cookie('lose', score['lose']);
   $.cookie('draw', score['draw']);
   renderScore();
+};
+
+//// 
+// Clear the score in the cookie
+// 
+// @author Pol Llovet
+// 
+function clearScore(){
+  $.cookie('win', 0);
+  $.cookie('lose', 0);
+  $.cookie('draw', 0);
 };
 
 //// 
